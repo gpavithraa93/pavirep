@@ -26,7 +26,26 @@
 							"type": "DelimitedTextReadSettings"
 						}
 					},
-					"enableStaging": false
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
 				},
 				"inputs": [
 					{
@@ -34,7 +53,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"ds_directory": {
-								"value": "@pipeline().parameters.pp_layerinpipeline().parameters.pp_filename",
+								"value": "@pipeline().parameters.pp_layerin",
 								"type": "Expression"
 							},
 							"ds_container": {
@@ -42,7 +61,27 @@
 								"type": "Expression"
 							},
 							"ds_filename": {
-								"value": "@pipeline().parameters.pp_filenamepipeline().parameters.pp_layerin",
+								"value": "@pipeline().parameters.pp_filename",
+								"type": "Expression"
+							}
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Parameter_dataset_3",
+						"type": "DatasetReference",
+						"parameters": {
+							"ds_directory": {
+								"value": "@pipeline().parameters.pp_layerout",
+								"type": "Expression"
+							},
+							"ds_container": {
+								"value": "@pipeline().parameters.pp_container",
+								"type": "Expression"
+							},
+							"ds_filename": {
+								"value": "@pipeline().parameters.pp_filename",
 								"type": "Expression"
 							}
 						}
