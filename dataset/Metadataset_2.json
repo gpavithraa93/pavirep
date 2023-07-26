@@ -5,6 +5,17 @@
 			"referenceName": "AzureDataLakeStorage1",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"md_filename": {
+				"type": "string"
+			},
+			"md_container": {
+				"type": "string"
+			},
+			"md_layer": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
