@@ -6,13 +6,13 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
+			"ds_container": {
+				"type": "string"
+			},
 			"ds_directory": {
 				"type": "string"
 			},
 			"ds_filename": {
-				"type": "string"
-			},
-			"ds_container": {
 				"type": "string"
 			}
 		},
@@ -34,7 +34,7 @@
 					"type": "Expression"
 				}
 			},
-			"columnDelimiter": ",",
+			"columnDelimiter": "\t",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
