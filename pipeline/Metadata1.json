@@ -15,18 +15,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"dataset": {
-						"referenceName": "Metadata2",
-						"type": "DatasetReference"
-					},
-					"fieldList": [],
-					"storeSettings": {
-						"type": "AzureBlobFSReadSettings",
-						"enablePartitionDiscovery": false
-					},
-					"formatSettings": {
-						"type": "DelimitedTextReadSettings"
-					}
+					"fieldList": []
 				}
 			}
 		],
