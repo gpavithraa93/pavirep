@@ -15,19 +15,33 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"fieldList": []
+					"dataset": {
+						"referenceName": "Metadataset_2",
+						"type": "DatasetReference"
+					},
+					"fieldList": [],
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "DelimitedTextReadSettings"
+					}
 				}
 			}
 		],
 		"parameters": {
 			"md_container": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "adlscontainer25july"
 			},
 			"md_filename": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "SalesLTProductCategory.txt"
 			},
 			"md_layername": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "STAGING"
 			}
 		},
 		"annotations": []
