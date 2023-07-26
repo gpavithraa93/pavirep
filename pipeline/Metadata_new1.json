@@ -13,9 +13,56 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "Metadataset_new1",
+						"type": "DatasetReference",
+						"parameters": {
+							"ds_directory": {
+								"value": "@pipeline().parameters.pp_directory",
+								"type": "Expression"
+							},
+							"ds_filename": {
+								"value": "@pipeline().parameters.pp_filename",
+								"type": "Expression"
+							},
+							"ds_container": {
+								"value": "@pipeline().parameters.pp_container",
+								"type": "Expression"
+							}
+						}
+					},
+					"fieldList": [
+						"childItems",
+						"columnCount",
+						"exists",
+						"itemName",
+						"itemType",
+						"lastModified",
+						"size"
+					],
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "DelimitedTextReadSettings"
+					}
+				}
 			}
 		],
+		"parameters": {
+			"pp_filename": {
+				"type": "string"
+			},
+			"pp_directory": {
+				"type": "string"
+			},
+			"pp_container": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
