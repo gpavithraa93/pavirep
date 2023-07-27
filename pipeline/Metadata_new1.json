@@ -17,24 +17,9 @@
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "Metadataset_new1",
-						"type": "DatasetReference",
-						"parameters": {
-							"ds_container": {
-								"value": "@pipeline().parameters.pp_container",
-								"type": "Expression"
-							},
-							"ds_directory": {
-								"value": "@pipeline().parameters.pp_directory",
-								"type": "Expression"
-							},
-							"ds_filename": {
-								"value": "@pipeline().parameters.pp_filename",
-								"type": "Expression"
-							}
-						}
+						"type": "DatasetReference"
 					},
 					"fieldList": [
-						"childItems",
 						"columnCount",
 						"exists",
 						"itemName",
@@ -44,6 +29,7 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -52,17 +38,6 @@
 				}
 			}
 		],
-		"parameters": {
-			"pp_container": {
-				"type": "string"
-			},
-			"pp_directory": {
-				"type": "string"
-			},
-			"pp_filename": {
-				"type": "string"
-			}
-		},
 		"annotations": []
 	}
 }
