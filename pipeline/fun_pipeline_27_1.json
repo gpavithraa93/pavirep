@@ -127,6 +127,10 @@
 											"value": "@pipeline().parameters.pp_container",
 											"type": "Expression"
 										},
+										"ds_layername": {
+											"value": "@pipeline().parameters.pp_layerout",
+											"type": "Expression"
+										},
 										"ds_filename": {
 											"value": "@item().name",
 											"type": "Expression"
