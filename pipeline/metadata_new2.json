@@ -1,6 +1,154 @@
 {
 	"name": "metadata_new2",
 	"properties": {
+		"activities": [
+			{
+				"name": "Get Metadata1",
+				"type": "GetMetadata",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "metadataset_new2",
+						"type": "DatasetReference"
+					},
+					"fieldList": [
+						"childItems",
+						"exists",
+						"itemName",
+						"lastModified"
+					],
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "DelimitedTextReadSettings"
+					}
+				}
+			},
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "Get Metadata1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"activities": [
+						{
+							"name": "Copy data1",
+							"type": "Copy",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"source": {
+									"type": "DelimitedTextSource",
+									"storeSettings": {
+										"type": "AzureBlobFSReadSettings",
+										"recursive": true,
+										"enablePartitionDiscovery": false
+									},
+									"formatSettings": {
+										"type": "DelimitedTextReadSettings"
+									}
+								},
+								"sink": {
+									"type": "DelimitedTextSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings"
+									},
+									"formatSettings": {
+										"type": "DelimitedTextWriteSettings",
+										"quoteAllText": true,
+										"fileExtension": ".txt"
+									}
+								},
+								"enableStaging": false,
+								"translator": {
+									"type": "TabularTranslator",
+									"typeConversion": true,
+									"typeConversionSettings": {
+										"allowDataTruncation": true,
+										"treatBooleanAsNumber": false
+									}
+								}
+							},
+							"inputs": [
+								{
+									"referenceName": "metadataset_new2",
+									"type": "DatasetReference",
+									"parameters": {
+										"ds_container": {
+											"value": "@pipeline().parameters.pp_container",
+											"type": "Expression"
+										},
+										"ds_directory": {
+											"value": "@pipeline().parameters.pp_directoryin",
+											"type": "Expression"
+										},
+										"ds_filename": {
+											"value": "@item().name",
+											"type": "Expression"
+										}
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "metadataset_new2",
+									"type": "DatasetReference",
+									"parameters": {
+										"ds_container": {
+											"value": "@pipeline().parameters.pp_container",
+											"type": "Expression"
+										},
+										"ds_directory": {
+											"value": "@pipeline().parameters.pp_directoryout",
+											"type": "Expression"
+										},
+										"ds_filename": {
+											"value": "@item().name",
+											"type": "Expression"
+										}
+									}
+								}
+							]
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"pp_container": {
+				"type": "string"
+			},
+			"pp_directoryin": {
+				"type": "string"
+			},
+			"pp_directoryout": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
