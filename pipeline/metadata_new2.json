@@ -16,24 +16,14 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "metadataset_new2",
-						"type": "DatasetReference",
-						"parameters": {
-							"ds_container": {
-								"value": "@pipeline().parameters.pp_container",
-								"type": "Expression"
-							},
-							"ds_directory": {
-								"value": "@pipeline().parameters.pp_directoryin",
-								"type": "Expression"
-							},
-							"ds_filename": " "
-						}
+						"referenceName": "DelimitedText3meta",
+						"type": "DatasetReference"
 					},
 					"fieldList": [
 						"childItems",
 						"exists",
 						"itemName",
+						"itemType",
 						"lastModified"
 					],
 					"storeSettings": {
