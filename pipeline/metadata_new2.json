@@ -26,7 +26,8 @@
 							"ds_directory": {
 								"value": "@pipeline().parameters.pp_directoryin",
 								"type": "Expression"
-							}
+							},
+							"ds_filename": " "
 						}
 					},
 					"fieldList": [
