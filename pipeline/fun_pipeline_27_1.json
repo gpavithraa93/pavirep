@@ -92,7 +92,7 @@
 			"pp_layerin": {
 				"type": "string"
 			},
-			"pp_layerout": {
+			"pp_filename": {
 				"type": "string"
 			}
 		},
