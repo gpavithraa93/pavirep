@@ -12,7 +12,7 @@
 			"ds_directory": {
 				"type": "string"
 			},
-			"ds.filename": {
+			"ds_filename": {
 				"type": "string"
 			}
 		},
@@ -21,8 +21,14 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "STAGING",
-				"fileSystem": "adlscontainer25july"
+				"folderPath": {
+					"value": "@dataset().ds_directory",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().ds_container",
+					"type": "Expression"
+				}
 			},
 			"columnDelimiter": "\t",
 			"escapeChar": "\\",
