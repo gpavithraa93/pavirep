@@ -61,6 +61,10 @@
 							"dependsOn": [],
 							"userProperties": [],
 							"typeProperties": {
+								"expression": {
+									"value": "@endswith(item().name,'csv')",
+									"type": "Expression"
+								},
 								"ifFalseActivities": [
 									{
 										"name": "Copy data2",
