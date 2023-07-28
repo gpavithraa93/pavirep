@@ -62,7 +62,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"expression": {
-									"value": "@endswith(item().name,'csv')",
+									"value": "@endswith(item().name,'.csv')",
 									"type": "Expression"
 								},
 								"ifFalseActivities": [
@@ -173,13 +173,13 @@
 										},
 										"inputs": [
 											{
-												"referenceName": "task_dataset",
+												"referenceName": "task_dataset_if_else_condition",
 												"type": "DatasetReference"
 											}
 										],
 										"outputs": [
 											{
-												"referenceName": "task_dataset",
+												"referenceName": "task_dataset_if_else_condition",
 												"type": "DatasetReference"
 											}
 										]
