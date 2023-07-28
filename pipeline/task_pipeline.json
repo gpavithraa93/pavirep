@@ -174,7 +174,12 @@
 										"inputs": [
 											{
 												"referenceName": "task_dataset_if_else_condition",
-												"type": "DatasetReference"
+												"type": "DatasetReference",
+												"parameters": {
+													"ds_container": "adlscontainer25july",
+													"ds_layername": "STAGING",
+													"ds_filename": "SalesLTProduct.txt"
+												}
 											}
 										],
 										"outputs": [
