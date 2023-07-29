@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "SqlServerSource",
-						"sqlReaderQuery": "select  * from [SalesLT].[ProductDetailsEmp] where color='Red'",
+						"sqlReaderQuery": "select  * from [SalesLT].[ProductDetails_Emp] where color='Red'",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
