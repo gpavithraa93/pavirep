@@ -113,14 +113,42 @@
 										},
 										"inputs": [
 											{
-												"referenceName": "task_dataset",
-												"type": "DatasetReference"
+												"referenceName": "task_dataset_if_else_condition",
+												"type": "DatasetReference",
+												"parameters": {
+													"ds_container": {
+														"value": "@pipeline().parameters.pp_container",
+														"type": "Expression"
+													},
+													"ds_layername": {
+														"value": "@pipeline().parameters.pp_dirc_staging",
+														"type": "Expression"
+													},
+													"ds_filename": {
+														"value": "@item().name",
+														"type": "Expression"
+													}
+												}
 											}
 										],
 										"outputs": [
 											{
-												"referenceName": "task_dataset",
-												"type": "DatasetReference"
+												"referenceName": "task_dataset_if_else_condition",
+												"type": "DatasetReference",
+												"parameters": {
+													"ds_container": {
+														"value": "@pipeline().parameters.pp_container",
+														"type": "Expression"
+													},
+													"ds_layername": {
+														"value": "@pipeline().parameters.pp_directory_txt",
+														"type": "Expression"
+													},
+													"ds_filename": {
+														"value": "@item().name",
+														"type": "Expression"
+													}
+												}
 											}
 										]
 									}
