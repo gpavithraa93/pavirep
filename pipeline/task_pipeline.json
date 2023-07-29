@@ -176,7 +176,10 @@
 												"referenceName": "task_dataset_if_else_condition",
 												"type": "DatasetReference",
 												"parameters": {
-													"ds_layername": "STAGING",
+													"ds_container": {
+														"value": "@pipeline().parameters.pp_container",
+														"type": "Expression"
+													},
 													"ds_filename": "SalesLTProduct.txt"
 												}
 											}
@@ -206,6 +209,9 @@
 				"type": "string"
 			},
 			"pp_directory_txt": {
+				"type": "string"
+			},
+			"pp_dirc_staging": {
 				"type": "string"
 			}
 		},
