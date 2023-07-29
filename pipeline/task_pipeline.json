@@ -176,7 +176,6 @@
 												"referenceName": "task_dataset_if_else_condition",
 												"type": "DatasetReference",
 												"parameters": {
-													"ds_container": "adlscontainer25july",
 													"ds_layername": "STAGING",
 													"ds_filename": "SalesLTProduct.txt"
 												}
@@ -196,6 +195,20 @@
 				}
 			}
 		],
+		"parameters": {
+			"pp_container": {
+				"type": "string"
+			},
+			"pp_directory_csv": {
+				"type": "string"
+			},
+			"pp_filename": {
+				"type": "string"
+			},
+			"pp_directory_txt": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
