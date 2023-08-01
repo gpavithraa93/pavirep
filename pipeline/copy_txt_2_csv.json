@@ -1,5 +1,5 @@
 {
-	"name": "pipeline3",
+	"name": "copy_txt_2_csv",
 	"properties": {
 		"activities": [
 			{
