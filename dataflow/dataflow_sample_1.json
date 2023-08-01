@@ -16,6 +16,9 @@
 			"transformations": [
 				{
 					"name": "filter1"
+				},
+				{
+					"name": "select1"
 				}
 			],
 			"scriptLines": [
@@ -29,7 +32,15 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> source1",
-				"source1 filter(color=='Red') ~> filter1"
+				"source1 filter(color=='Red') ~> filter1",
+				"filter1 select(mapColumn(",
+				"          ProductCategoryID,",
+				"          ParentProductCategoryID,",
+				"          Name,",
+				"          rowguid",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select1"
 			]
 		}
 	}
