@@ -52,7 +52,7 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> source1",
-				"source1 filter(Name==\"HL Road Frame - Black, 58\") ~> filter1",
+				"source1 filter(Color=='Red') ~> filter1",
 				"filter1 select(mapColumn(",
 				"          ProductCategoryID,",
 				"          ParentProductCategoryID,",
