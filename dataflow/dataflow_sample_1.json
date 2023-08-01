@@ -1,14 +1,10 @@
 {
-	"name": "dataflow1",
+	"name": "dataflow_sample_1",
 	"properties": {
 		"type": "MappingDataFlow",
 		"typeProperties": {
 			"sources": [
 				{
-					"dataset": {
-						"referenceName": "Dataflowsourcedataset",
-						"type": "DatasetReference"
-					},
 					"name": "source1"
 				}
 			],
@@ -16,8 +12,7 @@
 			"transformations": [],
 			"scriptLines": [
 				"source(allowSchemaDrift: true,",
-				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source1"
+				"     validateSchema: false) ~> source1"
 			]
 		}
 	}
