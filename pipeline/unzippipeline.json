@@ -29,12 +29,66 @@
 							}
 						}
 					},
-					"enableStaging": false
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings",
+							"copyBehavior": "FlattenHierarchy"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
 				},
 				"inputs": [
 					{
 						"referenceName": "unzipfiledataset",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"ds_container": {
+								"value": "@pipeline().parameters.pp_container",
+								"type": "Expression"
+							},
+							"ds_layer_name": {
+								"value": "@pipeline().parameters.pp_layer_name",
+								"type": "Expression"
+							},
+							"ds_directory_name": {
+								"value": "@pipeline().parameters.pp_directory_name",
+								"type": "Expression"
+							}
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "unzipfiledataset",
+						"type": "DatasetReference",
+						"parameters": {
+							"ds_container": {
+								"value": "@pipeline().parameters.pp_container",
+								"type": "Expression"
+							},
+							"ds_layer_name": {
+								"value": "@pipeline().parameters.pp_layer_name",
+								"type": "Expression"
+							},
+							"ds_directory_name": {
+								"value": "@pipeline().parameters.pp_directory_name",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
