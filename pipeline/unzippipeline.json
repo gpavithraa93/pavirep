@@ -39,6 +39,17 @@
 				]
 			}
 		],
+		"parameters": {
+			"pp_container": {
+				"type": "string"
+			},
+			"pp_layer_name": {
+				"type": "string"
+			},
+			"pp_directory_name": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
