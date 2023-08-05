@@ -1,0 +1,9 @@
+{
+	"name": "pavipractice07",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "33425279-ba9a-432e-8f1f-c00954aea3ee",
+		"tenantId": "4fbc9999-9047-465e-874d-f10665039227"
+	}
+}
