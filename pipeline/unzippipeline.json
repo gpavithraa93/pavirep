@@ -74,7 +74,21 @@
 				"outputs": [
 					{
 						"referenceName": "sinkunzipds",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"ds_container_name": {
+								"value": "@pipeline().parameters.pp_container",
+								"type": "Expression"
+							},
+							"ds_layer_name": {
+								"value": "@pipeline().parameters.pp_layer_name",
+								"type": "Expression"
+							},
+							"ds_directory_name": {
+								"value": "@pipeline().parameters.pp_directory_name",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
