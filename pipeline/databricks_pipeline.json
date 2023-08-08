@@ -1,5 +1,5 @@
 {
-	"name": "pipeline4",
+	"name": "databricks_pipeline",
 	"properties": {
 		"activities": [
 			{
@@ -15,7 +15,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/gpavithraa93@gmail.com/Mounting 2023-08-04 16:01:50"
+					"notebookPath": "/Users/gpavithraa93@gmail.com/Widgets 2023-08-08 23:29:25"
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureDatabricks1",
