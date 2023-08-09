@@ -10,8 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "AdventureWorksLT2012-20230725T180744Z-001.zip",
-				"folderPath": "STAGING",
+				"fileName": "AdventureWorksLT2012-20230809T180320Z-001.zip",
 				"fileSystem": "adlscontainer25july"
 			},
 			"columnDelimiter": ",",
