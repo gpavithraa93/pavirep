@@ -1,0 +1,30 @@
+{
+	"name": "P1_ds_unzip_source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "AdventureWorksLT2012-20230725T180744Z-001.zip",
+				"folderPath": "STAGING",
+				"fileSystem": "adlscontainer25july"
+			},
+			"columnDelimiter": ",",
+			"compressionCodec": "ZipDeflate",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "PK\u0003\u0004\u0014\u0000\b\b\b\u0000�H4T\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000-\u00006\u0000AdventureWorksLT2012/Demo 2 - usecase 1.ipynbup2\u0000\u0001�$1/AdventureWorksLT2012/Demo 2 - usecase 1.ipynb�\u001ako�8�{\u0005O\u0001.\t6��-�@>��\u0006�@�+��\u0015�MaP\u0012m\u000b�EU��z���7�\u001e�\";�\"��\u001d�F���\f��y���",
+				"type": "String"
+			}
+		]
+	}
+}
