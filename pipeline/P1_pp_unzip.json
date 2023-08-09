@@ -150,7 +150,7 @@
 				"typeProperties": {
 					"notebookPath": "/Users/gpavithraa93@gmail.com/Project 1",
 					"baseParameters": {
-						"file_path": "SalesLTProduct.txt"
+						"file_path": "/mnt/adlsdir/BRONZE/SalesLTProduct.txt"
 					}
 				},
 				"linkedServiceName": {
