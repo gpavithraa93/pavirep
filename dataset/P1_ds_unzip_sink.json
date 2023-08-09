@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "BRONZE",
+				"folderPath": "STAGING",
 				"fileSystem": "adlscontainer25july"
 			},
 			"columnDelimiter": ",",
