@@ -10,7 +10,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "Files",
 				"folderPath": "STAGING",
 				"fileSystem": "adlscontainer25july"
 			},
