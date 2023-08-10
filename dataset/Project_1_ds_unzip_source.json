@@ -1,5 +1,5 @@
 {
-	"name": "Project_1_ds_unzip",
+	"name": "Project_1_ds_unzip_source",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
