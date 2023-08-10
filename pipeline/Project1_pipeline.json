@@ -23,11 +23,7 @@
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
-							"type": "DelimitedTextReadSettings",
-							"compressionProperties": {
-								"type": "ZipDeflateReadSettings",
-								"preserveZipFileNameAsFolder": false
-							}
+							"type": "DelimitedTextReadSettings"
 						}
 					},
 					"sink": {
@@ -53,14 +49,8 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "Project_1_ds_unzip_source",
-						"type": "DatasetReference",
-						"parameters": {
-							"ds_container": {
-								"value": "@pipeline().parameters.pp_container",
-								"type": "Expression"
-							}
-						}
+						"referenceName": "Project_1ds_source",
+						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
