@@ -25,8 +25,7 @@
 						"formatSettings": {
 							"type": "DelimitedTextReadSettings",
 							"compressionProperties": {
-								"type": "ZipDeflateReadSettings",
-								"preserveZipFileNameAsFolder": true
+								"type": "ZipDeflateReadSettings"
 							}
 						}
 					},
@@ -54,21 +53,7 @@
 				"inputs": [
 					{
 						"referenceName": "Project_1_DS_Source",
-						"type": "DatasetReference",
-						"parameters": {
-							"ds_container": {
-								"value": "@pipeline().parameters.pp_container",
-								"type": "Expression"
-							},
-							"ds_folder": {
-								"value": "@pipeline().parameters.pp_foldername",
-								"type": "Expression"
-							},
-							"ds_filename": {
-								"value": "@pipeline().parameters.pp_filename",
-								"type": "Expression"
-							}
-						}
+						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
