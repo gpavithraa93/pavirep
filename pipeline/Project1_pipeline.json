@@ -59,7 +59,17 @@
 				"outputs": [
 					{
 						"referenceName": "Project_2_DS_Sink",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"ds_container": {
+								"value": "@pipeline().parameters.pp_container",
+								"type": "Expression"
+							},
+							"ds_folder": {
+								"value": "@pipeline().parameters.pp_foldername",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
