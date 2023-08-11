@@ -110,25 +110,20 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "Pro_1_ds_source",
+						"referenceName": "Pro_1_ds_getmetadata",
 						"type": "DatasetReference",
 						"parameters": {
 							"ds_container": {
 								"value": "@pipeline().parameters.pp_container",
 								"type": "Expression"
 							},
-							"ds_filename": {
-								"value": "@pipeline().parameters.pp_filename",
+							"ds_foldername": {
+								"value": "@pipeline().parameters.pp_foldername",
 								"type": "Expression"
 							}
 						}
 					},
-					"fieldList": [
-						"exists",
-						"itemName",
-						"itemType",
-						"lastModified"
-					],
+					"fieldList": [],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
 						"enablePartitionDiscovery": false
