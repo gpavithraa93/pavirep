@@ -58,10 +58,6 @@
 							"ds_Container": {
 								"value": "@pipeline().parameters.pp_container",
 								"type": "Expression"
-							},
-							"ds_Filename": {
-								"value": "@pipeline().parameters.pp_filename",
-								"type": "Expression"
 							}
 						}
 					}
@@ -69,17 +65,7 @@
 				"outputs": [
 					{
 						"referenceName": "Pro_1_ds_sink",
-						"type": "DatasetReference",
-						"parameters": {
-							"ds_container": {
-								"value": "@pipeline().parameters.pp_container",
-								"type": "Expression"
-							},
-							"ds_foldername": {
-								"value": "@pipeline().parameters.pp_foldername",
-								"type": "Expression"
-							}
-						}
+						"type": "DatasetReference"
 					}
 				]
 			}
