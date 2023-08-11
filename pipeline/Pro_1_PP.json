@@ -110,7 +110,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "Pro_1_ds_getmetadata",
+						"referenceName": "Pro_1_ds_sink",
 						"type": "DatasetReference",
 						"parameters": {
 							"ds_container": {
@@ -127,10 +127,7 @@
 							}
 						}
 					},
-					"fieldList": [
-						"childItems",
-						"itemName"
-					],
+					"fieldList": [],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
 						"enablePartitionDiscovery": false
