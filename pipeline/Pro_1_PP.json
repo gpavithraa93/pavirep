@@ -277,7 +277,7 @@
 						"type": "Expression"
 					},
 					"condition": {
-						"value": "@item().name",
+						"value": "@activity('Metadata for the folder').output.childItemsitem().name==@item(name)",
 						"type": "Expression"
 					}
 				}
