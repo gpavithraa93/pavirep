@@ -72,17 +72,6 @@
 				]
 			}
 		],
-		"parameters": {
-			"pp_container": {
-				"type": "string"
-			},
-			"pp_foldername": {
-				"type": "string"
-			},
-			"pp_filename": {
-				"type": "string"
-			}
-		},
 		"annotations": []
 	}
 }
