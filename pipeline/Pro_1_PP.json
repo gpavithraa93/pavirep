@@ -120,11 +120,16 @@
 							"ds_foldername": {
 								"value": "@pipeline().parameters.pp_foldername",
 								"type": "Expression"
+							},
+							"ds_filename": {
+								"value": "@pipeline().parameters.pp_filename",
+								"type": "Expression"
 							}
 						}
 					},
 					"fieldList": [
-						"childItems"
+						"childItems",
+						"itemName"
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
@@ -141,6 +146,9 @@
 				"type": "string"
 			},
 			"pp_foldername": {
+				"type": "string"
+			},
+			"pp_filename": {
 				"type": "string"
 			}
 		},
