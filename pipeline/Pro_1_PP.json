@@ -55,13 +55,7 @@
 				"inputs": [
 					{
 						"referenceName": "Pro_1_ds_source",
-						"type": "DatasetReference",
-						"parameters": {
-							"ds_Container": {
-								"value": "@pipeline().parameters.pp_container",
-								"type": "Expression"
-							}
-						}
+						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
@@ -72,6 +66,14 @@
 				]
 			}
 		],
+		"parameters": {
+			"pp_container": {
+				"type": "string"
+			},
+			"pp_filename": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
