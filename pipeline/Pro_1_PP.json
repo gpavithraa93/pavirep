@@ -58,6 +58,10 @@
 							"ds_Container": {
 								"value": "@pipeline().parameters.pp_container",
 								"type": "Expression"
+							},
+							"ds_Filename": {
+								"value": "@pipeline().parameters.pp_filename",
+								"type": "Expression"
 							}
 						}
 					}
