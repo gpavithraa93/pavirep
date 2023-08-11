@@ -26,15 +26,14 @@
 							"type": "DelimitedTextReadSettings",
 							"compressionProperties": {
 								"type": "ZipDeflateReadSettings",
-								"preserveZipFileNameAsFolder": false
+								"preserveZipFileNameAsFolder": true
 							}
 						}
 					},
 					"sink": {
 						"type": "DelimitedTextSink",
 						"storeSettings": {
-							"type": "AzureBlobFSWriteSettings",
-							"copyBehavior": "FlattenHierarchy"
+							"type": "AzureBlobFSWriteSettings"
 						},
 						"formatSettings": {
 							"type": "DelimitedTextWriteSettings",
