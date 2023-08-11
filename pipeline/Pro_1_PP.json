@@ -110,7 +110,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "Pro_1_ds_sink",
+						"referenceName": "Pro_1_Metadata_ds",
 						"type": "DatasetReference",
 						"parameters": {
 							"ds_container": {
@@ -120,14 +120,13 @@
 							"ds_foldername": {
 								"value": "@pipeline().parameters.pp_foldername",
 								"type": "Expression"
-							},
-							"ds_filename": {
-								"value": "@pipeline().parameters.pp_filename",
-								"type": "Expression"
 							}
 						}
 					},
-					"fieldList": [],
+					"fieldList": [
+						"childItems",
+						"itemName"
+					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
 						"enablePartitionDiscovery": false
